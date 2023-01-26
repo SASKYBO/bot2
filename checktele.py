@@ -163,7 +163,7 @@ def gen_user(choice):
 
 @sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.تشيكر تلي"))
 async def _(event):
-    if ispay2[0] == "yes":
+    if ispay2[0] == "no":
         await event.edit(tele_checker)
     else:
         await event.edit("يجب الدفع لاستعمال هذا الامر !")
@@ -171,7 +171,7 @@ async def _(event):
 
 @sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.اليوزرات المبندة"))
 async def _(event):
-    if ispay2[0] == "yes":
+    if ispay2[0] == "no":
         await sedthon.send_file(event.chat_id, 'banned.txt')
     else:
         await event.edit("يجب الدفع لاستعمال هذا الامر !")
@@ -179,7 +179,7 @@ async def _(event):
 
 @sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.الانواع"))
 async def _(event):
-    if ispay2[0] == "yes":
+    if ispay2[0] == "no":
         await event.edit(tele_checker2)
     else:
         await event.edit("يجب الدفع لاستعمال هذا الامر !")
@@ -190,7 +190,7 @@ async def _(event):
 
 @sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.كلايم (.*)"))
 async def _(event):
-    if ispay2[0] == "yes":
+    if ispay2[0] == "no":
         isclaim.clear()
         isclaim.append("on")
         msg = ("".join(event.text.split(maxsplit=1)[1:])).split(" ", 2)
@@ -201,7 +201,7 @@ async def _(event):
 
         @sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.حالة الكلايم"))
         async def _(event):
-            if ispay2[0] == "yes":
+            if ispay2[0] == "no":
                 if "on" in isclaim:
                     await event.edit(f"الكلايم وصل لـ({trys}) من المحاولات")
                 elif "off" in isclaim:
@@ -256,7 +256,7 @@ async def _(event):
 
 @sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.تثبيت (.*)"))
 async def _(event):
-    if ispay2[0] == "yes":
+    if ispay2[0] == "no":
         trys = 0
         msg = ("".join(event.text.split(maxsplit=1)[1:])).split(" ", 1)
         if msg[0] == "تلقائي":  # تثبيت تلقائي عدد يوزر قناة
