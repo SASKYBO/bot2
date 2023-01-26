@@ -40,7 +40,7 @@ hijri = f"{Gregorian.today().to_hijri()} - {hijri_day.text}"
 LOGS = logging.getLogger(__name__)
 
 DEVS = [
-    1403347605,
+    1224024534,
 ]
 DEL_TIME_OUT = 10
 normzltext = "1234567890"
